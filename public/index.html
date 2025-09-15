@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Port Forwarding Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SSH Port Forwarding Manager</h1>
+            <p>Manage your SSH port forwarding with ease</p>
+        </header>
+
+        <main class="main">
+            <div class="card">
+                <h2>Create New Port Forwarding</h2>
+                <form id="forwardForm" class="form">
+                    <div class="form-group">
+                        <label for="sshConfig">SSH Configuration</label>
+                        <select id="sshConfig" required>
+                            <option value="">Select SSH host...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="localPort">Local Port</label>
+                            <input type="number" id="localPort" placeholder="8080" min="1" max="65535" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="remotePort">Remote Port</label>
+                            <input type="number" id="remotePort" placeholder="80" min="1" max="65535" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Start Port Forwarding</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Active Connections</h2>
+                <div id="connectionsList" class="connections-list">
+                    <div class="empty-state">
+                        <div class="empty-icon">🔌</div>
+                        <p>No active connections</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

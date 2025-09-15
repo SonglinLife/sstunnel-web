@@ -1,0 +1,38 @@
+{
+  "name": "sstunnel-web",
+  "version": "1.0.0",
+  "description": "一个现代化的SSH端口转发管理工具，提供美观的Web界面和丰富的API接口",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "ssh-config": "^4.4.3",
+    "node-ssh": "^13.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "ssh",
+    "port-forwarding",
+    "tunnel",
+    "webui",
+    "ssh-tunnel",
+    "port-management",
+    "web-interface"
+  ],
+  "author": "SonglinLife",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SonglinLife/sstunnel-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SonglinLife/sstunnel-web/issues"
+  },
+  "homepage": "https://github.com/SonglinLife/sstunnel-web#readme"
+}

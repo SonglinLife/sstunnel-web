@@ -1,0 +1,9 @@
+# SSH Configuration File
+# This file follows the same format as ~/.ssh/config
+
+Host mini-server
+    HostName 192.168.18.231
+    User wu
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+
